@@ -63,7 +63,7 @@ resource "aws_security_group" "ec2_sg" {
 # Instance 1: jenkins
 # ----------------------------
 resource "aws_instance" "Jenkins_server" {
-  ami           = "ami-08982f1c5bf93d976" # Amazon Linux 2 (us-east-1)
+  ami           = "ami-0c7d68785ec07306c" # Amazon Linux 2 (us-east-1)
   instance_type = "t2.large"
   key_name      = aws_key_pair.mykey.key_name
   security_groups = [aws_security_group.ec2_sg.name]
@@ -134,7 +134,7 @@ resource "aws_instance" "Jenkins_server" {
 # Instance 2: k8s Server
 # ----------------------------
 resource "aws_instance" "k8s_server" {
-  ami           = "ami-08982f1c5bf93d976"
+  ami           = "ami-0c7d68785ec07306c"
   instance_type = "t2.xlarge"
   key_name      = aws_key_pair.mykey.key_name
   security_groups = [aws_security_group.ec2_sg.name]
