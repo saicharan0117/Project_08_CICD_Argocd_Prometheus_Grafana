@@ -1,5 +1,7 @@
 provider "aws" {
   region = "us-east-1"
+  version = "5.74.0"
+
 }
 
 # Key Pair (use your existing public key)
